@@ -2,6 +2,7 @@
 export default {
   props: {
     left: Boolean,
+    // eslint-disable-next-line vue/require-prop-type-constructor
     default: false,
   },
 };
