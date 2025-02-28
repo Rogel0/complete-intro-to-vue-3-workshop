@@ -1,5 +1,11 @@
 <script>
 export default {
+  props: {
+    increment: {
+      type: Function,
+      required: true,
+    },
+  },
   data: () => ({
     count: 10,
     counterTitle: "Counter Standard",
@@ -15,13 +21,6 @@ export default {
     },
     optimizedIncrementAmount() {
       return this.displayTitle.length * this.incrementAmount;
-    },
-  },
-  methods: {
-    incrementCount(newAmount, event) {
-      console.log(newAmount);
-      console.log(event);
-      this.count += this.optimizedIncrementAmount;
     },
   },
 };

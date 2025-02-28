@@ -37,11 +37,18 @@ export default {
       ],
     };
   },
+  methods: {
+    incrementCount(newAmount, event) {
+      console.log(newAmount);
+      console.log(event);
+      this.count += this.optimizedIncrementAmount;
+    },
+  },
 };
 </script>
 
 <template>
-  <BaseCounter />
+  <BaseCounter :increment="incrementCount" />
   <hr />
   <p v-if="message.length % 2 === 0">Even: {{ message.toUpperCase() }}</p>
   <p v-else>Odd: {{ message }}</p>
